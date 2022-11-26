@@ -1,65 +1,79 @@
+:root {
+  --success: #28a745;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: #212529;
+  font-family: Arial;
+  background-color: #796637;
+}
+
+header {
   display: flex;
-  color: black;
-  background-color: black;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
   flex-direction: row;
-  box-sizing: border-box;
+  justify-content: center;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: var(--success);
 }
 
-#side-bar {
-  width: 20rem;
+.container {
   display: flex;
-  overflow: hidden;
-  min-width: 15rem;
-  max-width: 200rem;
-  align-items: center;
-  flex-direction: column;
-  border-top-right-radius: .5rem;
-  border-bottom-right-radius: .5rem;
-  /* justify-content: center; */
-  background-color: #67afb1;
-  border-right: .2rem black solid;
-}
-
-#content-view {
-  display: flex;
-  min-width: 40rem;
-  /* overflow: hidden; */
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: #969255;
-  border-top-left-radius: .5rem;
-  border-bottom-left-radius: .5rem;
-  /* border-right: .2rem black solid; */
 }
 
-#txt-content {
-  overflow: auto;
-  min-width: 40rem;
-  font-size: 2rem;
-  color: #f5f5f5;
-  font-family: Cambria;
-  text-transform: capitalize;
-  background-color: transparent;
-  border: none;
-}
-
-#txt-content::selection {
-  color: #67afb1;
-  background-color: #d2691e;
-}
-
-#submit {
-  width: 10rem;
-  height: 3.2rem;
-  cursor: pointer;
-  color: #050505;
+#lblsuccess {
   font-size: 1.5rem;
   font-weight: bold;
-  border-radius: 1.5rem;
-  font-family: Cambria;
-  background-color: #969255;
+  color: var(--success);
+  text-shadow: .1rem .1rem black;
+}
+
+.txt-input {
+  border: none;
+  height: 2rem;
+  width: 25rem;
+  background-color: #00000031;
+  border-bottom: solid black .1rem;
+}
+
+.sub-btn {
+  width: 10rem;
+  height: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-align: center;
+  border-radius: .5rem;
+  background-color: gray;
+}
+
+#tasksForm {
+  width: 50rem;
+  height: 18rem;
+  overflow: scroll;
+  margin-top: -3rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+#tasksForm::scroll-bar {
+  margin: 0;
+  padding: 0;
+  border-radius: 2rem;
+  background-color: black;
 }

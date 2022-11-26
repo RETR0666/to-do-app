@@ -10,12 +10,25 @@
 </head>
 
 <body>
-  <div id="side-bar">
-    <h1>To Do</h1>
-    <button type="button" id="submit" onclick="add_todo()">Add</button>
-  </div>
-  <div id="content-view">
-    <textarea name="txt-content" id="txt-content" cols="30" rows="10"></textarea>
+  <header>
+    <div>
+      <h1>ToDo List</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Add Items</h2>
+    <label id="lblsuccess" style="display: none;">
+    </label>
+    <form id="addForm">
+      <input type="text" onkeyup="toggleButton(this, 'submit')" class="txt-input" id="item">
+      <br/>
+      <input type="submit" class="sub-btn" id="submit" value="Submit" disabled>
+    </form>
+    <h2 class="mt-4">Tasks</h2>
+    <form id="tasksForm">
+      <ul class="list-group" id="items"></ul>
+    </form>
   </div>
   <script src="script.js" defer></script>
 </body>
